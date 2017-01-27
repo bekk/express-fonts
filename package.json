@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mqchen/express-fonts.git"
+  },
   "scripts": {},
   "author": "",
   "license": "ISC",
