@@ -1,7 +1,7 @@
 {
   "name": "express-fonts",
   "description": "ExpressJS middleware for font hosting and css generating.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": ["express", "fonts", "css"],
   "main": "index.js",
   "repository": {
