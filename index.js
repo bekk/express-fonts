@@ -7,7 +7,7 @@ const express = require('express');
 const Font = require('./Font');
 const readdir = promisify(fs.readdir);
 
-const defaultOpts = {
+const DEFAULT_OPTS = {
   'fontsdir': './fonts',
   'fontspath': '/fonts',
   'csspath': '/css',
@@ -15,7 +15,7 @@ const defaultOpts = {
 }
 
 module.exports = opts => {
-  opts = Object.assign({}, defaultOpts, opts);
+  opts = Object.assign({}, DEFAULT_OPTS, opts);
 
   return (req, res, next) => {
    let u = url.parse(req.url, true);
@@ -40,6 +40,9 @@ module.exports = opts => {
      res.status(404).send('No matching font.');
      return;
    }
+
+   // TODO: select weights and fontstyles
+   // eg. family=Lato:100,100i,300,300i,400
 
    readdir(dir).then(files => {
      let css = [];
