@@ -11,7 +11,8 @@ const DEFAULT_OPTS = {
   'fontsdir': './fonts',
   'fontspath': '/fonts',
   'csspath': '/css',
-  'familyQuery': 'family'
+  'familyquery': 'family',
+  'maxage': 3600 * 24 * 7
 }
 
 module.exports = opts => {
@@ -30,6 +31,7 @@ module.exports = opts => {
 
    // Css generating
    res.type('text/css');
+   res.set('Cache-Control', 'public, max-age=' + opts.maxage);
 
    let query = u.query || {};
    let dir = opts.fontsdir + '/' + query[opts.familyQuery] + '/';
