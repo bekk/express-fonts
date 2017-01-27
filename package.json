@@ -1,15 +1,16 @@
 {
   "name": "express-fonts",
-  "version": "1.0.0",
-  "description": "",
+  "description": "ExpressJS middleware for font hosting and css generating.",
+  "version": "1.0.1",
+  "keywords": ["express", "fonts", "css"],
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:bekk/express-fonts.git"
   },
   "scripts": {},
-  "author": "",
-  "license": "ISC",
+  "author": "Moquan Chen <mq.chen@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "es6-promisify": "^5.0.0",
     "express": "^4.14.0",

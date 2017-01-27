@@ -1,5 +1,6 @@
 # Example usage
 
+server.js
 ```javascript
 const app = require('express')();
 const fonts = require('express-fonts');
@@ -9,4 +10,9 @@ app.use(fonts({
   'fontspath': '/fonts',
   'fontsdir': './fonts'
 }));
+```
+
+html
+```html
+<link rel="stylesheet" href="/css?family=Museo Sans" type="text/css" />
 ```
