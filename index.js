@@ -34,9 +34,9 @@ module.exports = opts => {
    res.set('Cache-Control', 'public, max-age=' + opts.maxage);
 
    let query = u.query || {};
-   let dir = opts.fontsdir + '/' + query[opts.familyQuery] + '/';
+   let dir = opts.fontsdir + '/' + query[opts.familyquery] + '/';
 
-   if(!query[opts.familyQuery]
+   if(!query[opts.familyquery]
      || !fs.existsSync(dir)
      || fs.realpathSync(dir).indexOf(fs.realpathSync(opts.fontsdir)) !== 0) {
      res.status(404).send('No matching font.');
